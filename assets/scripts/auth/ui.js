@@ -1,20 +1,29 @@
 'use strict'
 
-// const store = require('../store')
+const store = require('../store')
 
 const signUpSuccess = (data) => {
-  console.log(data)
+  console.log('signUpSuccess ran. data is ', data)
 }
 
 const signUpFailure = (error) => {
-  console.error(error)
+  console.error('signUpFailure ran. error is ', error)
+}
+
+const signInSuccess = data => {
+  console.log('signInSuccess ran. data is ', data)
+  store.user = data.user
+}
+
+const signInFailure = error => {
+  console.error('signInFailure ran. error is ', error)
 }
 
 module.exports = {
   signUpSuccess,
-  signUpFailure
-  // signInSuccess,
-  // signInFailure,
+  signUpFailure,
+  signInSuccess,
+  signInFailure
   // signOutSuccess,
   // signOutFailure,
   // changePasswordSuccess,
