@@ -11,9 +11,16 @@ const onSearch = function () {
     .catch(ui.searchFailure)
 }
 
+const onBarList = function () {
+  event.preventDefault()
+  api.barList()
+    .then(ui.barListSuccess)
+    .catch(ui.barListFailure)
+}
+
 const addHandlers = () => {
   $('#search').on('click', onSearch)
-  // $('#sign-in').on('submit', onSignIn)
+  $('#bar').on('click', onBarList)
   // $('#sign-out').on('submit', onSignOut)
 }
 

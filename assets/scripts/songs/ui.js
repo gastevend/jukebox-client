@@ -12,7 +12,19 @@ const searchFailure = error => {
   console.log('searhcing songs is NOT working and error is', error)
 }
 
+const barListSuccess = data => {
+  console.log('bar list songs is working and data is', data)
+  // const showSongsHtml = showSongsTemplate({ songs: data.songs })
+  // $('.view').append(showSongsHtml)
+}
+
+const barListFailure = error => {
+  console.log('bar list songs is NOT working and error is', error)
+}
+
 module.exports = {
   searchSuccess,
-  searchFailure
+  searchFailure,
+  barListSuccess,
+  barListFailure
 }

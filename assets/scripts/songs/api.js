@@ -10,6 +10,14 @@ const search = () => {
   })
 }
 
+const barList = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/user_songs',
+    method: 'GET'
+  })
+}
+
 module.exports = {
-  search
+  search,
+  barList
 }
