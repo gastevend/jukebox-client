@@ -1,0 +1,17 @@
+{{#each songs as |song|}}
+
+  <!-- {{> partial}} -->
+
+
+  <!-- Developers, why are we using data-id and not just id? -->
+
+    <div data-id="{{song.id}}" class='row'>
+      <div>
+        {{song.name}}
+      </div>
+      <div>
+          {{song.artist}}
+      </div>
+      <div>
+          {{song.runtime}}
+{{/each}}
