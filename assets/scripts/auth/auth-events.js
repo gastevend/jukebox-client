@@ -20,10 +20,17 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+const onSignOut = function () {
+  event.preventDefault()
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  // $('#sign-out').on('submit', onSignOut)
+  $('#sign-out').on('submit', onSignOut)
   // $('#change-password').on('submit', onChangePassword)
 }
 
