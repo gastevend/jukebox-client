@@ -28,13 +28,21 @@ const signOutFailure = error => {
   console.error('signOutFailure ran. error is ', error)
 }
 
+const changePasswordSuccess = data => {
+  console.log('changePassword is running')
+}
+
+const changePasswordFailure = error => {
+  console.error('changePasswordFailure ran. error is ', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
-  // changePasswordSuccess,
-  // changePasswordFailure
+  signOutFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }
