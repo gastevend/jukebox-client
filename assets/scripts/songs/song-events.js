@@ -6,6 +6,7 @@ const ui = require('./ui')
 
 const onSearch = function () {
   event.preventDefault()
+  $('.view').empty()
   api.search()
     .then(ui.searchSuccess)
     .catch(ui.searchFailure)
@@ -13,6 +14,7 @@ const onSearch = function () {
 
 const onBarList = function () {
   event.preventDefault()
+  $('.view').empty()
   api.barList()
     .then(ui.barListSuccess)
     .catch(ui.barListFailure)

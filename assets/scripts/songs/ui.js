@@ -1,6 +1,7 @@
 'use strict'
 
 const showSongsTemplate = require('../templates/songlist.handlebars')
+const showBarListTemplate = require('../templates/barlist.handlebars')
 
 const searchSuccess = data => {
   console.log('searhcing songs is working and data is', data)
@@ -14,8 +15,8 @@ const searchFailure = error => {
 
 const barListSuccess = data => {
   console.log('bar list songs is working and data is', data)
-  // const showSongsHtml = showSongsTemplate({ songs: data.songs })
-  // $('.view').append(showSongsHtml)
+  const showBarListHtml = showBarListTemplate({ user_songs: data.user_songs })
+  $('.view').append(showBarListHtml)
 }
 
 const barListFailure = error => {

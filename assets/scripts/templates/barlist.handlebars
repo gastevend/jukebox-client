@@ -1,0 +1,15 @@
+{{#each user_songs as |user_song|}}
+
+  <!-- {{> partial}} -->
+    <div data-id="{{user_song.id}}" class='row'>
+      <div class='col-lg-4'>
+        {{user_song.song.name}}
+      </div>
+      <div class='col-lg-4'>
+          {{user_song.song.artist}}
+      </div>
+      <div class='col-lg-4'>
+          {{user_song.song.runtime}}
+      </div>
+    </div>
+{{/each}}
