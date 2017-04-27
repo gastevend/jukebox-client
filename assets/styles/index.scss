@@ -1,2 +1,11 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+form {
+  margin-bottom: 20px;
+  text-align: center;
+
+  legend {
+    border-bottom: 0;
+  }
+}
