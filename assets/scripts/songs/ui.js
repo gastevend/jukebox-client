@@ -23,9 +23,21 @@ const barListFailure = error => {
   console.log('bar list songs is NOT working and error is', error)
 }
 
+const yourListSuccess = data => {
+  console.log('your list songs is working and data is', data)
+  // const showBarListHtml = showBarListTemplate({ user_songs: data.user_songs })
+  // $('.view').append(showBarListHtml)
+}
+
+const yourListFailure = error => {
+  console.log('your list songs is NOT working and error is', error)
+}
+
 module.exports = {
   searchSuccess,
   searchFailure,
   barListSuccess,
-  barListFailure
+  barListFailure,
+  yourListSuccess,
+  yourListFailure
 }

@@ -20,10 +20,18 @@ const onBarList = function () {
     .catch(ui.barListFailure)
 }
 
+const onYourList = function () {
+  event.preventDefault()
+  $('.view').empty()
+  api.yourList()
+    .then(ui.yourListSuccess)
+    .catch(ui.yourListFailure)
+}
+
 const addHandlers = () => {
   $('#search').on('click', onSearch)
   $('#bar').on('click', onBarList)
-  // $('#sign-out').on('submit', onSignOut)
+  $('#you').on('click', onYourList)
 }
 
 module.exports = {

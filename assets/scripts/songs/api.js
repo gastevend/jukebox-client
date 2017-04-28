@@ -1,7 +1,7 @@
 'use strict'
 
 const config = require('../config')
-// const store = require('../store')
+const store = require('../store')
 
 const search = () => {
   return $.ajax({
@@ -17,7 +17,18 @@ const barList = () => {
   })
 }
 
+const yourList = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/your-songs',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   search,
-  barList
+  barList,
+  yourList
 }
