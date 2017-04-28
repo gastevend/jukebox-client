@@ -30,8 +30,20 @@ const yourList = () => {
   })
 }
 
+const chooseSong = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/user_songs',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   search,
   barList,
-  yourList
+  yourList,
+  chooseSong
 }
