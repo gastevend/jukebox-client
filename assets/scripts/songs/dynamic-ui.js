@@ -1,9 +1,9 @@
 'use strict'
 
+const showEditSongTemplate = require('../templates/editSong.handlebars')
+
 const chooseSongSuccess = data => {
   console.log('you chose a song! data is ', data)
-  // const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
-  // $('.view').append(showYourListHtml)
 }
 
 const chooseSongFailure = error => {
@@ -12,8 +12,8 @@ const chooseSongFailure = error => {
 
 const editSongSuccess = data => {
   console.log('you edited a song! data is ', data)
-  // const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
-  // $('.view').append(showYourListHtml)
+  const showEditSongHtml = showEditSongTemplate({ user_song: data.user_song })
+  $('.one-song[data-id=' + data.user_song.id + ']').append(showEditSongHtml)
 }
 
 const editSongFailure = error => {
