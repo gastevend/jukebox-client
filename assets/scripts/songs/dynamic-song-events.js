@@ -20,7 +20,6 @@ const onChooseSong = function () {
 
 const onEdit = function () {
   const rowToEdit = $(this).attr('data-id')
-  console.log(rowToEdit)
   $(this).parent().parent().empty()
   const songId = '1' // this is wrong
   const userId = store.user.id
