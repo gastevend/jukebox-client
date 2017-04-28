@@ -13,7 +13,10 @@ const search = () => {
 const barList = () => {
   return $.ajax({
     url: config.apiOrigin + '/user_songs',
-    method: 'GET'
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 

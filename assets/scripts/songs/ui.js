@@ -2,6 +2,7 @@
 
 const showSongsTemplate = require('../templates/songlist.handlebars')
 const showBarListTemplate = require('../templates/barlist.handlebars')
+const showYourListTemplate = require('../templates/yourlist.handlebars')
 
 const searchSuccess = data => {
   console.log('searhcing songs is working and data is', data)
@@ -25,8 +26,8 @@ const barListFailure = error => {
 
 const yourListSuccess = data => {
   console.log('your list songs is working and data is', data)
-  // const showBarListHtml = showBarListTemplate({ user_songs: data.user_songs })
-  // $('.view').append(showBarListHtml)
+  const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
+  $('.view').append(showYourListHtml)
 }
 
 const yourListFailure = error => {
