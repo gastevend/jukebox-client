@@ -51,10 +51,22 @@ const leave = () => {
   })
 }
 
+const editSong = (data, rowToEdit) => {
+  return $.ajax({
+    url: config.apiOrigin + '/user_songs/' + rowToEdit,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   search,
   barList,
   yourList,
   chooseSong,
-  leave
+  leave,
+  editSong
 }
