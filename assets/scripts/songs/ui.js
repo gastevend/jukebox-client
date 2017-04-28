@@ -4,10 +4,16 @@ const showSongsTemplate = require('../templates/songlist.handlebars')
 const showBarListTemplate = require('../templates/barlist.handlebars')
 const showYourListTemplate = require('../templates/yourlist.handlebars')
 
+const onChooseSong = function () {
+  console.log('onChooseSong is running and what you click on is ',
+  $(this).attr('data-id'))
+}
+
 const searchSuccess = data => {
   console.log('searhcing songs is working and data is', data)
   const showSongsHtml = showSongsTemplate({ songs: data.songs })
   $('.view').append(showSongsHtml)
+  $('.song').on('click', onChooseSong)
 }
 
 const searchFailure = error => {
