@@ -36,11 +36,23 @@ const yourListFailure = error => {
   console.log('your list songs is NOT working and error is', error)
 }
 
+const leaveSuccess = data => {
+  console.log('you left and so did your songs')
+  // const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
+  // $('.view').append(showYourListHtml)
+}
+
+const leaveFailure = error => {
+  console.log('you can never leave! and error is', error)
+}
+
 module.exports = {
   searchSuccess,
   searchFailure,
   barListSuccess,
   barListFailure,
   yourListSuccess,
-  yourListFailure
+  yourListFailure,
+  leaveSuccess,
+  leaveFailure
 }

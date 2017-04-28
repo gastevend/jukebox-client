@@ -41,9 +41,20 @@ const chooseSong = (data) => {
   })
 }
 
+const leave = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/remove-songs',
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   search,
   barList,
   yourList,
-  chooseSong
+  chooseSong,
+  leave
 }
