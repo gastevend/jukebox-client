@@ -18,6 +18,7 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
+  $('#sign-in').trigger('reset')
 }
 
 const onSignOut = function () {
