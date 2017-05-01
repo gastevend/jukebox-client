@@ -1,5 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Roboto");
+$primary-color: #DE2A0B;
 
 form {
   margin-bottom: 20px;
@@ -10,7 +12,21 @@ form {
   }
 }
 
-// .footer {
-//   bottom: 0;
-//   position: absolute;
-// }
+#icons {
+  color: $primary-color;
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 200%;
+}
+
+.view {
+  font-family: 'Roboto', cursive;
+
+  .row {
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 10px;
+  }
+}
+
+.headerz {
+  font-family: 'Roboto', cursive;
+}
