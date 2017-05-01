@@ -43,6 +43,8 @@ const signOutSuccess = data => {
   $('.headerz').hide()
   $('.sound-board').show()
   $('#cpdropdown').hide()
+  $('#sulink').show()
+  $('.view').empty()
 }
 
 const signOutFailure = error => {
@@ -51,10 +53,13 @@ const signOutFailure = error => {
 
 const changePasswordSuccess = data => {
   console.log('changePassword is running')
+  $('#cpsuccess').show()
+  $('#cperror').hide()
 }
 
 const changePasswordFailure = error => {
   console.error('changePasswordFailure ran. error is ', error)
+  $('#cperror').show()
 }
 
 module.exports = {

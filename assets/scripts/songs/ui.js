@@ -30,7 +30,7 @@ const yourListSuccess = data => {
   console.log('your list songs is working and data is', data)
   const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
   $('.view').append(showYourListHtml)
-  $('.edit').on('click', dynamicSongEvents.onEdit)
+  $('.edit').on('click', dynamicSongEvents.onUserChoiceEdit)
 }
 
 const yourListFailure = error => {

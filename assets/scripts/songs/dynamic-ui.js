@@ -1,6 +1,7 @@
 'use strict'
 
-const showEditSongTemplate = require('../templates/editSong.handlebars')
+const searchEditTemplate = require('../templates/searchEdit.handlebars')
+const editSongEvent = require('./edit-song-event.js')
 
 const chooseSongSuccess = data => {
   console.log('you chose a song! data is ', data)
@@ -10,19 +11,20 @@ const chooseSongFailure = error => {
   console.log('choosing a song did not work and error is', error)
 }
 
-const editSongSuccess = data => {
-  console.log('you edited a song! data is ', data)
-  const showEditSongHtml = showEditSongTemplate({ user_song: data.user_song })
-  $('.one-song[data-id=' + data.user_song.id + ']').append(showEditSongHtml)
+const searchEditSuccess = (rowToEdit, data) => {
+  console.log('looking for a new song is working and data is', data)
+  const searchEditHtml = searchEditTemplate({ songs: data.songs })
+  $('.one-song[data-id=' + rowToEdit + ']').append(searchEditHtml)
+  $('.edit-song').on('click', editSongEvent.onEdit)
 }
 
-const editSongFailure = error => {
-  console.log('editting a song did not work and error is', error)
+const searchEditFailure = error => {
+  console.log('looking for a new song is NOT working and error is', error)
 }
 
 module.exports = {
   chooseSongSuccess,
   chooseSongFailure,
-  editSongSuccess,
-  editSongFailure
+  searchEditSuccess,
+  searchEditFailure
 }

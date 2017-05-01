@@ -10,6 +10,8 @@ const showHide = function () {
   $('#susuccess').hide()
   $('#suerror').hide()
   $('#sierror').hide()
+  $('#cpsuccess').hide()
+  $('#cperror').hide()
 }
 
 const onShowSignUp = function () {

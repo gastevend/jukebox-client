@@ -18,23 +18,14 @@ const onChooseSong = function () {
     .catch(dynamicUi.chooseSongFailure)
 }
 
-const onEdit = function () {
+const onUserChoiceEdit = function () {
   const rowToEdit = $(this).attr('data-id')
-  $(this).parent().parent().empty()
-  const songId = '1' // this is wrong
-  const userId = store.user.id
-  const data = {
-    'user_song': {
-      'song_id': songId,
-      'user_id': userId
-    }
-  }
-  api.editSong(data, rowToEdit)
-    .then(dynamicUi.editSongSuccess)
-    .catch(dynamicUi.editSongFailure)
+  api.search()
+    .then(dynamicUi.searchEditSuccess.bind(null, rowToEdit))
+    .catch(dynamicUi.searchEditFailure)
 }
 
 module.exports = {
   onChooseSong,
-  onEdit
+  onUserChoiceEdit
 }
