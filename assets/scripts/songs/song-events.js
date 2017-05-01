@@ -10,6 +10,8 @@ const onSearch = function () {
   api.search()
     .then(ui.searchSuccess)
     .catch(ui.searchFailure)
+  $('.navi').removeClass('active')
+  $(this).addClass('active')
 }
 
 const onBarList = function () {
@@ -18,6 +20,8 @@ const onBarList = function () {
   api.barList()
     .then(ui.barListSuccess)
     .catch(ui.barListFailure)
+  $('.navi').removeClass('active')
+  $(this).addClass('active')
 }
 
 const onYourList = function () {
@@ -26,6 +30,8 @@ const onYourList = function () {
   api.yourList()
     .then(ui.yourListSuccess)
     .catch(ui.yourListFailure)
+  $('.navi').removeClass('active')
+  $(this).addClass('active')
 }
 
 const onLeave = function () {

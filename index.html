@@ -29,16 +29,18 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
               </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Sign Up</a></li>
-              </ul>
-                <form id="sign-in" class="navbar-form navbar-right">
-                  <fieldset>
-                    <input type='text' name='credentials[email]' id='sign-in-email' class='form-control' placeholder='Email'>
-                    <input type='password' name='credentials[password]' id='sign-in-password' class='form-control' placeholder='Password'>
-                    <input type="submit" name="submit" class='btn btn-success' value="Sign in">
-                  </fieldset>
-                </form>
+              <form id="sign-out" class="navbar-form navbar-right">
+                <fieldset>
+                  <input type="submit" name="submit" value="Sign Out" class='btn btn-success'>
+                </fieldset>
+              </form>
+              <form id="sign-in" class="navbar-form navbar-right">
+                <fieldset>
+                  <input type='text' name='credentials[email]' id='sign-in-email' class='form-control' placeholder='Email'>
+                  <input type='password' name='credentials[password]' id='sign-in-password' class='form-control' placeholder='Password'>
+                  <input type="submit" name="submit" class='btn btn-success' value="Sign in">
+                </fieldset>
+              </form>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
@@ -60,15 +62,6 @@
           </div>
 
         <div class='row'>
-          <form id="sign-out">
-            <fieldset>
-              <legend>Sign Out!</legend>
-              <input type="submit" name="submit" value="Sign Out!">
-            </fieldset>
-          </form>
-        </div>
-
-        <div class='row'>
           <form id="change-password">
             <fieldset>
               <legend>Change Password!</legend>
@@ -80,39 +73,36 @@
         </div>
 
         <div class='row'>
-          <h3 class='col-lg-4'>Songs</h3>
-          <h3 class='col-lg-4'>Artist</h3>
-          <h3 class='col-lg-3'>Runtime</h3>
+          <h3 class='col-lg-4 text-center'>Songs</h3>
+          <h3 class='col-lg-4 text-center'>Artist</h3>
+          <h3 class='col-lg-3 text-center'>Runtime</h3>
         </div>
 
         <div class='container-fluid view'>
         </div>
 
-
-        <div class="btn-group btn-group-justified" role="group">
+        <nav class="navbar-fixed-bottom">
+          <div class="container">
+        <div class="btn-group btn-group-justified footer" role="group">
           <div class="btn-group" role="group">
-            <button type="button" id='bar' class="btn btn-default btn-lg">
+            <button type="button" id='bar' class="btn btn-default btn-lg navi">
               <span class="glyphicon glyphicon-cd"></span> Bar's Queue
             </button>
           </div>
           <div class="btn-group" role="group">
-            <button type="button" id='search' class="btn btn-default btn-lg">
+            <button type="button" id='search' class="btn btn-default btn-lg active navi">
               <span class="glyphicon glyphicon-search"></span> Search
             </button>
           </div>
           <div class="btn-group" role="group">
-            <button type="button" id='you' class="btn btn-default btn-lg">
+            <button type="button" id='you' class="btn btn-default btn-lg navi">
               <span class="glyphicon glyphicon-fire"></span>
               <span class="glyphicon glyphicon-music"></span> Your Picks
             </button>
           </div>
         </div>
-
-        <ul class="nav nav-tabs nav-justified">
-          <li role="presentation" class="active"><a href="#">Home</a></li>
-          <li role="presentation"><a href="#">Profile</a></li>
-          <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
+      </div>
+    </nav>
 
 
       </div>
