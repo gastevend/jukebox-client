@@ -16,8 +16,6 @@ require('./example')
 const viewHandler = require('./views.js')
 
 viewHandler.showHide()
-// $('#sign-out').hide()
-// $('#change-password').hide()
 
 const authEvents = require('./auth/auth-events.js')
 const songEvents = require('./songs/song-events.js')
@@ -25,4 +23,5 @@ const songEvents = require('./songs/song-events.js')
 $(() => {
   authEvents.addHandlers()
   songEvents.addHandlers()
+  viewHandler.addHandlers()
 })

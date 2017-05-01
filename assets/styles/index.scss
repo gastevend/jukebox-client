@@ -1,7 +1,9 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Roboto");
-$primary-color: #FF7833;
+$primary-color: #ff7833;
+$song-seperater: #f2f2f2;
+$header-color: #fff;
 
 form {
   margin-bottom: 20px;
@@ -22,7 +24,7 @@ form {
   font-family: 'Roboto', cursive;
 
   .row {
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid $song-seperater;
     margin-bottom: 10px;
   }
 }
@@ -32,11 +34,32 @@ form {
 }
 
 .sound-board {
+  border-radius: 5px;
   height: 100%;
   width: 100%;
-  border-radius: 5px;
 }
 
 .navbar {
   margin-bottom: 0;
+}
+
+.sign-up-container {
+  margin-top: 10%;
+  width: 50%;
+
+  .auth-header {
+    background-color: $primary-color;
+    border-radius: 5px;
+    color: $header-color;
+    // height: 70%;
+  }
+
+  input {
+    margin-bottom: 3%;
+    width: 100%;
+  }
+}
+
+#sign-up-submit {
+  width: 30%;
 }
