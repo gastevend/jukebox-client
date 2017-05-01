@@ -1,7 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Roboto");
-$primary-color: #DE2A0B;
+$primary-color: #FF7833;
 
 form {
   margin-bottom: 20px;
@@ -29,4 +29,14 @@ form {
 
 .headerz {
   font-family: 'Roboto', cursive;
+}
+
+.sound-board {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.navbar {
+  margin-bottom: 0;
 }
