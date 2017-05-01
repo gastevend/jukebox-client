@@ -21,12 +21,14 @@ const signInSuccess = data => {
   $('#sign-out').show()
   $('#sign-in').hide()
   $('#susuccess').hide()
+  $('#suerror').hide()
   $('.sound-board').hide()
   $('#sulink').hide()
   $('.footer').show()
   $('.headerz').show()
   $('#sierror').hide()
   $('#cpdropdown').show()
+  $('.sign-up-container').hide()
 }
 
 const signInFailure = error => {
