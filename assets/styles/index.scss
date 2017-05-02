@@ -5,6 +5,11 @@ $primary-color: #ff7833;
 $song-seperater: #f2f2f2;
 $header-color: #fff;
 
+
+body {
+  max-width: 1450px;
+}
+
 form {
   margin-bottom: 20px;
   text-align: center;
@@ -47,24 +52,34 @@ form {
 }
 
 .sign-up-container {
-  margin-top: 10%;
-  width: 50%;
+  margin-top: 5%;
 
   .auth-header {
     background-color: $primary-color;
     border-radius: 5px;
     color: $header-color;
-    // height: 70%;
+    font-size: xx-large;
   }
 
   input {
     margin-bottom: 3%;
-    width: 100%;
+    width: 80%;
+    font-size: large;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
   }
 }
 
-#sign-up-submit {
-  width: 30%;
+#sign-up {
+  border: 2px solid $song-seperater;
+  border-radius: 6px;
+  height: 400px;
+
+  #sign-up-submit {
+    width: 30%;
+    margin-top: 20%;
+  }
 }
 
 .navi {

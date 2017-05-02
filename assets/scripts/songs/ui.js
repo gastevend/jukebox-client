@@ -25,6 +25,7 @@ const barListFailure = error => {
 }
 
 const yourListSuccess = data => {
+  console.log(data)
   const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
   $('.view').append(showYourListHtml)
   $('.edit').on('click', dynamicSongEvents.onUserChoiceEdit)
