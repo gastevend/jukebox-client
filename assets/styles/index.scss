@@ -86,3 +86,11 @@ form {
   border-radius: 9px;
   position: absolute;
 }
+
+.pre-scrollable {
+  max-height: 440px;
+}
+
+.song:hover, .edit-song:hover {
+  background-color: $song-seperater;
+}

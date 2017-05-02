@@ -21,7 +21,7 @@ const onChooseSong = function () {
 const onUserChoiceEdit = function () {
   const rowToEdit = $(this).attr('data-id')
   if ($('.edit-song-pane').is(':visible')) {
-    $(this).popover()
+    $(this).popover('toggle')
   } else {
     api.search()
       .then(dynamicUi.searchEditSuccess.bind(null, rowToEdit))

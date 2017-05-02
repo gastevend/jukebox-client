@@ -43,6 +43,7 @@ const onYourList = function () {
   const showYourJumbo = showYourJumboTemplate()
   $('.jumbotron').empty()
   $('.jumbotron').append(showYourJumbo)
+  $('[data-toggle="popover"]').popover()
 }
 
 const onLeave = function () {
