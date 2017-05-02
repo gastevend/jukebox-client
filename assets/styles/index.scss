@@ -22,10 +22,12 @@ form {
 
 .view {
   font-family: 'Roboto', cursive;
+  border: 3px solid $song-seperater;
+  border-radius: 6px;
 
   .row {
     border-bottom: 1px solid $song-seperater;
-    margin-bottom: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -67,6 +69,11 @@ form {
 
 .navi {
   height: 60px;
+  background: #ff7983;
+  background: -webkit-linear-gradient($song-seperater, #A1A1A1);
+  background: -o-linear-gradient($song-seperater, #A1A1A1);
+  background: -moz-linear-gradient($song-seperater, #A1A1A1);
+  background: linear-gradient($song-seperater, #A1A1A1);
 }
 
 .navbar-fixed-bottom {
@@ -75,9 +82,11 @@ form {
 
 .jumbotron {
   margin-bottom: 0;
-  // background-image: url('http://esq.h-cdn.co/assets/cm/15/06/54d3cdbba4f40_-_esq-01-bar-lgn.jpg');
-  // background-size: cover;
-  // color: $header-color;
+  background-image: url('http://phandroid.s3.amazonaws.com/wp-content/uploads/2014/03/google_play_music_all_access.jpg');
+  // background-image: url('http://az616578.vo.msecnd.net/files/2017/02/11/636224271281269682241862366_music9.jpg');
+  background-size: 100%;
+  background-position: 30% 45%;
+  // background-position: 0% 30%;
 }
 
 .add-animation {
@@ -88,9 +97,10 @@ form {
 }
 
 .pre-scrollable {
-  max-height: 440px;
+  max-height: 480px;
 }
 
 .song:hover, .edit-song:hover {
   background-color: $song-seperater;
+  border-radius: 3px;
 }
