@@ -1,14 +1,14 @@
 {{#each songs as |song|}}
 
   <!-- {{> partial}} -->
-    <div data-id="{{song.id}}" class='row song'>
-      <div class='col-lg-4 text-center'>
+    <div data-id="{{song.id}}" class='row song col-lg-offset-1'>
+      <div class='col-lg-4'>
         {{song.name}}
       </div>
-      <div class='col-lg-4 text-center'>
+      <div class='col-lg-4'>
           {{song.artist}}
       </div>
-      <div class='col-lg-3 text-center'>
+      <div class='col-lg-3'>
           {{song.runtime}}
       </div>
     </div>

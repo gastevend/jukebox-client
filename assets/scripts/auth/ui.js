@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const showSearchJumboTemplate = require('../templates/search-jumbo.handlebars')
 
 const signUpSuccess = (data) => {
   console.log('signUpSuccess ran. data is ', data)
@@ -25,10 +26,13 @@ const signInSuccess = data => {
   $('.sound-board').hide()
   $('#sulink').hide()
   $('.footer').show()
-  $('.headerz').show()
   $('#sierror').hide()
   $('#cpdropdown').show()
   $('.sign-up-container').hide()
+  $('#leave').show()
+  $('.jumbotron').show()
+  const showSearchJumbo = showSearchJumboTemplate()
+  $('.jumbotron').append(showSearchJumbo)
 }
 
 const signInFailure = error => {
@@ -47,6 +51,9 @@ const signOutSuccess = data => {
   $('#cpdropdown').hide()
   $('#sulink').show()
   $('.view').empty()
+  $('#leave').hide()
+  $('.jumbotron').empty()
+  $('.jumbotron').hide()
 }
 
 const signOutFailure = error => {

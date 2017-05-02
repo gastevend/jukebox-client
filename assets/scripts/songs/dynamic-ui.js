@@ -5,6 +5,8 @@ const editSongEvent = require('./edit-song-event.js')
 
 const chooseSongSuccess = data => {
   console.log('you chose a song! data is ', data)
+  $('.add-animation').fadeIn('slow')
+  $('.add-animation').fadeOut('slow')
 }
 
 const chooseSongFailure = error => {

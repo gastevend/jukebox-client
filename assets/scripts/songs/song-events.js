@@ -1,6 +1,8 @@
 'use strict'
 
-// const getFormFields = require(`../../../lib/get-form-fields`)
+const showBarJumboTemplate = require('../templates/bar-jumbo.handlebars')
+const showSearchJumboTemplate = require('../templates/search-jumbo.handlebars')
+const showYourJumboTemplate = require('../templates/your-jumbo.handlebars')
 const api = require('./api')
 const ui = require('./ui')
 
@@ -12,6 +14,9 @@ const onSearch = function () {
     .catch(ui.searchFailure)
   $('.navi').removeClass('active')
   $(this).addClass('active')
+  const showSearchJumbo = showSearchJumboTemplate()
+  $('.jumbotron').empty()
+  $('.jumbotron').append(showSearchJumbo)
 }
 
 const onBarList = function () {
@@ -22,6 +27,9 @@ const onBarList = function () {
     .catch(ui.barListFailure)
   $('.navi').removeClass('active')
   $(this).addClass('active')
+  const showBarJumbo = showBarJumboTemplate()
+  $('.jumbotron').empty()
+  $('.jumbotron').append(showBarJumbo)
 }
 
 const onYourList = function () {
@@ -32,6 +40,9 @@ const onYourList = function () {
     .catch(ui.yourListFailure)
   $('.navi').removeClass('active')
   $(this).addClass('active')
+  const showYourJumbo = showYourJumboTemplate()
+  $('.jumbotron').empty()
+  $('.jumbotron').append(showYourJumbo)
 }
 
 const onLeave = function () {

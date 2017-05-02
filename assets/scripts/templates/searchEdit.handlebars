@@ -1,21 +1,21 @@
 
 <div class='container edit-song-pane col-lg-7 col-lg-offset-3'>
 
-  <h4 class='col-lg-4 text-center'>Songs</h4>
-  <h4 class='col-lg-4 text-center'>Artist</h4>
-  <h4 class='col-lg-3 text-center'>Runtime</h4>
+  <h4 class='col-lg-4'>Songs</h4>
+  <h4 class='col-lg-4'>Artist</h4>
+  <h4 class='col-lg-3'>Runtime</h4>
 
   {{#each songs as |song|}}
 
   <!-- {{> partial}} -->
     <div data-id="{{song.id}}" class='row edit-song'>
-      <div class='col-lg-4 text-center'>
+      <div class='col-lg-4'>
         {{song.name}}
       </div>
-      <div class='col-lg-4 text-center'>
+      <div class='col-lg-4'>
           {{song.artist}}
       </div>
-      <div class='col-lg-3 text-center'>
+      <div class='col-lg-3'>
           {{song.runtime}}
       </div>
     </div>

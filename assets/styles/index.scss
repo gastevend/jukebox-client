@@ -31,6 +31,7 @@ form {
 
 .headerz {
   font-family: 'Roboto', cursive;
+  margin-bottom: 10px;
 }
 
 .sound-board {
@@ -62,4 +63,26 @@ form {
 
 #sign-up-submit {
   width: 30%;
+}
+
+.navi {
+  height: 60px;
+}
+
+.navbar-fixed-bottom {
+  margin-bottom: 1px;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  // background-image: url('http://esq.h-cdn.co/assets/cm/15/06/54d3cdbba4f40_-_esq-01-bar-lgn.jpg');
+  // background-size: cover;
+  // color: $header-color;
+}
+
+.add-animation {
+  background-color: green;
+  color: $header-color;
+  border-radius: 9px;
+  position: absolute;
 }

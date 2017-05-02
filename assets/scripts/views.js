@@ -12,6 +12,8 @@ const showHide = function () {
   $('#sierror').hide()
   $('#cpsuccess').hide()
   $('#cperror').hide()
+  $('.jumbotron').hide()
+  $('.add-animation').hide()
 }
 
 const onShowSignUp = function () {
