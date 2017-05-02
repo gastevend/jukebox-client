@@ -104,3 +104,9 @@ form {
   background-color: $song-seperater;
   border-radius: 3px;
 }
+
+@media (max-width: 499px) {
+  .just-icon {
+    display: none;
+  }
+}

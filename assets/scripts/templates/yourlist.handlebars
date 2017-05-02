@@ -1,24 +1,24 @@
 <div class='row headerz'>
-  <h3 class='col-lg-4'>Songs</h3>
-  <h3 class='col-lg-4'>Artist</h3>
-  <h3 class='col-lg-3'>Runtime</h3>
+  <h3 class='col-lg-4 col-xs-4' >Songs</h3>
+  <h3 class='col-lg-4 col-xs-3'>Artist</h3>
+  <h3 class='col-lg-3 col-xs-2'>Runtime</h3>
 </div>
 
 {{#each user_songs as |user_song|}}
 
   <!-- {{> partial}} -->
     <div data-id="{{user_song.id}}" class='row one-song'>
-      <div class='col-lg-4'>
+      <div class='col-lg-4 col-xs-4'>
         {{user_song.song.name}}
       </div>
-      <div class='col-lg-4'>
+      <div class='col-lg-4 col-xs-3'>
           {{user_song.song.artist}}
       </div>
-      <div class='col-lg-3'>
+      <div class='col-lg-3 col-xs-2'>
           {{user_song.song.runtime}}
       </div>
-      <div class='col-lg-1'>
-        <button type="button" data-id="{{user_song.id}}" class="btn btn-default edit" data-toggle="popover" title="Edit Window" data-content="You have an edit window open. Please choose a song to update to" data-placement="left" data-trigger="manual">Edit</button>
+      <div class='col-lg-1 col-xs-2'>
+        <button type="button" data-id="{{user_song.id}}" class="btn btn-default edit" data-toggle="popover" title="Edit Window" data-content="You have an edit window open. Please choose a song to update to" data-placement="bottom" data-trigger="manual">Edit</button>
       </div>
     </div>
 {{/each}}

@@ -1,20 +1,20 @@
 <div class='row headerz col-lg-offset-1'>
-  <h3 class='col-lg-4'>Songs</h3>
-  <h3 class='col-lg-4'>Artist</h3>
-  <h3 class='col-lg-3'>Runtime</h3>
+  <h3 class='col-lg-4 col-xs-4'>Songs</h3>
+  <h3 class='col-lg-4 col-xs-4'>Artist</h3>
+  <h3 class='col-lg-3 col-xs-3'>Runtime</h3>
 </div>
 
 {{#each songs as |song|}}
 
   <!-- {{> partial}} -->
     <div data-id="{{song.id}}" class='row song col-lg-offset-1'>
-      <div class='col-lg-4'>
+      <div class='col-lg-4 col-xs-4'>
         {{song.name}}
       </div>
-      <div class='col-lg-4'>
+      <div class='col-lg-4 col-xs-4'>
           {{song.artist}}
       </div>
-      <div class='col-lg-3'>
+      <div class='col-lg-3 col-xs-3'>
           {{song.runtime}}
       </div>
     </div>
