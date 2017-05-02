@@ -10,6 +10,7 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
+  $('#sign-up').trigger('reset')
 }
 
 const onSignIn = function (event) {
@@ -35,6 +36,7 @@ const onChangePassword = function () {
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
+  $('#change-password').trigger('reset')
 }
 
 const addHandlers = () => {
