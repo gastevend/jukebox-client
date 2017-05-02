@@ -6,7 +6,6 @@ const showYourListTemplate = require('../templates/yourlist.handlebars')
 const dynamicSongEvents = require('./dynamic-song-events.js')
 
 const searchSuccess = data => {
-  $('.headerz').show()
   const showSongsHtml = showSongsTemplate({ songs: data.songs })
   $('.view').append(showSongsHtml)
   $('.song').on('click', dynamicSongEvents.onChooseSong)
@@ -17,7 +16,6 @@ const searchFailure = error => {
 }
 
 const barListSuccess = data => {
-  $('.headerz').show()
   const showBarListHtml = showBarListTemplate({ user_songs: data.user_songs })
   $('.view').append(showBarListHtml)
 }
@@ -27,7 +25,6 @@ const barListFailure = error => {
 }
 
 const yourListSuccess = data => {
-  $('.headerz').show()
   const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
   $('.view').append(showYourListHtml)
   $('.edit').on('click', dynamicSongEvents.onUserChoiceEdit)

@@ -1,13 +1,13 @@
 <!-- {{> partial}} -->
-<div class='col-lg-4 text-center'>
+<div class='col-lg-4'>
   {{user_song.song.name}}
 </div>
-<div class='col-lg-4 text-center'>
+<div class='col-lg-4'>
     {{user_song.song.artist}}
 </div>
-<div class='col-lg-3 text-center'>
+<div class='col-lg-3'>
     {{user_song.song.runtime}}
 </div>
 <div class='col-lg-1'>
-  <button type="button" data-id="{{user_song.id}}" class="btn btn-default edit">Edit</button>
+  <button type="button" data-id="{{user_song.id}}" class="btn btn-default edit" disabled="disabled">Edit</button>
 </div>

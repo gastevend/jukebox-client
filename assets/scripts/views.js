@@ -5,7 +5,6 @@ const showHide = function () {
   $('#cpdropdown').hide()
   $('.sign-up-container').hide()
   $('#leave').hide()
-  $('.headerz').hide()
   $('.footer').hide()
   $('#susuccess').hide()
   $('#suerror').hide()

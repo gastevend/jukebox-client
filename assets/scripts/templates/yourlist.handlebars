@@ -1,3 +1,9 @@
+<div class='row headerz'>
+  <h3 class='col-lg-4'>Songs</h3>
+  <h3 class='col-lg-4'>Artist</h3>
+  <h3 class='col-lg-3'>Runtime</h3>
+</div>
+
 {{#each user_songs as |user_song|}}
 
   <!-- {{> partial}} -->
@@ -12,7 +18,7 @@
           {{user_song.song.runtime}}
       </div>
       <div class='col-lg-1'>
-        <button type="button" data-id="{{user_song.id}}" class="btn btn-default edit">Edit</button>
+        <button type="button" data-id="{{user_song.id}}" class="btn btn-default edit" data-toggle="popover" title="Edit Window" data-content="You have an edit window open. Please choose a song to update to">Edit</button>
       </div>
     </div>
 {{/each}}

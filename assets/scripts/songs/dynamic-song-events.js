@@ -20,9 +20,13 @@ const onChooseSong = function () {
 
 const onUserChoiceEdit = function () {
   const rowToEdit = $(this).attr('data-id')
-  api.search()
-    .then(dynamicUi.searchEditSuccess.bind(null, rowToEdit))
-    .catch(dynamicUi.searchEditFailure)
+  if ($('.edit-song-pane').is(':visible')) {
+    $(this).popover()
+  } else {
+    api.search()
+      .then(dynamicUi.searchEditSuccess.bind(null, rowToEdit))
+      .catch(dynamicUi.searchEditFailure)
+  }
 }
 
 module.exports = {

@@ -46,7 +46,6 @@ const signOutSuccess = data => {
   $('#sign-out').hide()
   $('#sign-in').show()
   $('.footer').hide()
-  $('.headerz').hide()
   $('.sound-board').show()
   $('#cpdropdown').hide()
   $('#sulink').show()
@@ -54,6 +53,7 @@ const signOutSuccess = data => {
   $('#leave').hide()
   $('.jumbotron').empty()
   $('.jumbotron').hide()
+  $('.navi').removeClass('active')
 }
 
 const signOutFailure = error => {
