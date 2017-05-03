@@ -4,7 +4,6 @@ const store = require('../store')
 const showSearchJumboTemplate = require('../templates/search-jumbo.handlebars')
 
 const signUpSuccess = (data) => {
-  console.log('signUpSuccess ran. data is ', data)
   $('.sign-up-container').hide()
   $('#susuccess').show()
   $('.sound-board').show()
@@ -17,7 +16,6 @@ const signUpFailure = (error) => {
 }
 
 const signInSuccess = data => {
-  console.log('signInSuccess ran. data is ', data)
   store.user = data.user
   $('#sign-out').show()
   $('#sign-in').hide()
@@ -41,7 +39,6 @@ const signInFailure = error => {
 }
 
 const signOutSuccess = data => {
-  console.log('signOutSuccess is running and nothing is returned')
   store.user = null
   $('#sign-out').hide()
   $('#sign-in').show()
@@ -61,7 +58,6 @@ const signOutFailure = error => {
 }
 
 const changePasswordSuccess = data => {
-  console.log('changePassword is running')
   $('#cpsuccess').show()
   $('#cperror').hide()
 }

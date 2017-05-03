@@ -31,7 +31,6 @@ const onSignOut = function () {
 
 const onChangePassword = function () {
   event.preventDefault()
-  console.log('onChangePassword is running')
   const data = getFormFields(this)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)

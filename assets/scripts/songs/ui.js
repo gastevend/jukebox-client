@@ -12,7 +12,7 @@ const searchSuccess = data => {
 }
 
 const searchFailure = error => {
-  console.log('searhcing songs is NOT working and error is', error)
+  console.error('error is ', error)
 }
 
 const barListSuccess = data => {
@@ -21,28 +21,26 @@ const barListSuccess = data => {
 }
 
 const barListFailure = error => {
-  console.log('bar list songs is NOT working and error is', error)
+  console.error('bar list songs is NOT working and error is', error)
 }
 
 const yourListSuccess = data => {
-  console.log(data)
   const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
   $('.view').append(showYourListHtml)
   $('.edit').on('click', dynamicSongEvents.onUserChoiceEdit)
 }
 
 const yourListFailure = error => {
-  console.log('your list songs is NOT working and error is', error)
+  console.error('your list songs is NOT working and error is', error)
 }
 
 const leaveSuccess = data => {
-  console.log('you left and so did your songs')
   // const showYourListHtml = showYourListTemplate({ user_songs: data.user_songs })
   // $('.view').append(showYourListHtml)
 }
 
 const leaveFailure = error => {
-  console.log('you can never leave! and error is', error)
+  console.error('you can never leave! and error is', error)
 }
 
 module.exports = {
