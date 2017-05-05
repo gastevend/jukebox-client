@@ -8,6 +8,7 @@ const signUpSuccess = (data) => {
   $('#susuccess').show()
   $('.sound-board').show()
   $('#suerror').hide()
+  $('#sierror').hide()
 }
 
 const signUpFailure = (error) => {
@@ -36,6 +37,7 @@ const signInSuccess = data => {
 const signInFailure = error => {
   console.error('signInFailure ran. error is ', error)
   $('#sierror').show()
+  $('#suerror').hide()
 }
 
 const signOutSuccess = data => {
@@ -55,6 +57,7 @@ const signOutSuccess = data => {
 
 const signOutFailure = error => {
   console.error('signOutFailure ran. error is ', error)
+  $('#sierror').hide()
 }
 
 const changePasswordSuccess = data => {
