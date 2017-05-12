@@ -125,3 +125,21 @@ form {
     display: none;
   }
 }
+
+@media (max-height: 820px) {
+  .pre-scrollable {
+    max-height: 350px;
+  }
+}
+
+@media (max-height: 700px) {
+  .pre-scrollable {
+    max-height: 300px;
+  }
+}
+
+@media (max-height: 650px) {
+  .pre-scrollable {
+    max-height: 225px;
+  }
+}
