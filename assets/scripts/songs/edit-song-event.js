@@ -4,6 +4,7 @@ const api = require('./api')
 const editUi = require('./edit-ui')
 const store = require('../store')
 
+// this is the ajax call when a user actually clicks on a song from the edit dropdown
 const onEdit = function () {
   const rowToEdit = $(this).closest('.one-song').attr('data-id')
   $(this).closest('.one-song').empty()
