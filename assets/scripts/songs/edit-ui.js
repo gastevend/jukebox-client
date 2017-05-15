@@ -5,6 +5,7 @@ const showEditSongTemplate = require('../templates/editSong.handlebars')
 const editClickSongSuccess = data => {
   const showEditSongHtml = showEditSongTemplate({ user_song: data.user_song })
   $('.one-song[data-id=' + data.user_song.id + ']').append(showEditSongHtml)
+  $('[data-toggle="popover"]').popover('hide')
 }
 
 const editClickSongFailure = error => {

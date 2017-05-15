@@ -13,6 +13,7 @@ const chooseSongFailure = error => {
 }
 
 const searchEditSuccess = (rowToEdit, data) => {
+  $('.one-song').not('.one-song[data-id=' + rowToEdit + ']').css('background-color', 'white')
   const searchEditHtml = searchEditTemplate({ songs: data.songs })
   $('.one-song[data-id=' + rowToEdit + ']').append(searchEditHtml)
   $('.edit-song').on('click', editSongEvent.onEdit)

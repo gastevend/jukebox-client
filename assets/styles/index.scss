@@ -115,6 +115,10 @@ form {
   max-height: 480px;
 }
 
+.btn[disabled] {
+  background-color: gray;
+}
+
 .song:hover, .edit-song:hover {
   background-color: $song-seperater;
   border-radius: 3px;
