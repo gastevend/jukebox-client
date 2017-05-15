@@ -5,7 +5,6 @@ const showEditSongTemplate = require('../templates/editSong.handlebars')
 const editClickSongSuccess = data => {
   const showEditSongHtml = showEditSongTemplate({ user_song: data.user_song })
   $('.one-song[data-id=' + data.user_song.id + ']').append(showEditSongHtml)
-  $('.one-song').animate({background: '#FF0000'})
 }
 
 const editClickSongFailure = error => {

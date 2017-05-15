@@ -23,6 +23,7 @@ const onUserChoiceEdit = function () {
   const rowToEdit = $(this).attr('data-id')
   if ($('.edit-song-pane').is(':visible')) {
     $(this).popover('toggle')
+    $('[data-toggle="popover"]').not(this).popover('hide')
   } else {
     $(this).closest('.one-song').css('background-color', 'yellow')
     api.search()
